@@ -2,7 +2,7 @@ import React from "react";
 
 const Modal = () => {
   return (
-    <div className="h-[100vh] w-full flex items-center justify-center">
+    <div className=" modal h-[100vh] w-full flex items-center justify-center">
       <div className="bg-[#6D31ED] h-[251px] w-[556px] rounded-3xl p-8">
         <h1 className="text-3xl text-white">
           Are you sure you want to delete conversation 1?

@@ -10,8 +10,8 @@ function App() {
     <>
       {/* <Login /> */}
       {/* <SignUp /> */}
-      <Chat />
-      {/* <Modal /> */}
+      {/* <Chat /> */}
+      <Modal />
     </>
   );
 }

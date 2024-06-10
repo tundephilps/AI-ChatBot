@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBrain, FaSeedling, FaTrash, FaPlus } from "react-icons/fa";
+import { FaPlus, FaRegTrashAlt } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import logo from "../assets/images/logo.png";
 import avatar from "../assets/images/avatar.png";
@@ -27,11 +27,11 @@ const Chat = () => {
             <div className=" bg-[#F8F9FA] w-full min-h-[70vh] flex flex-col gap-2 ">
               <div className="bg-[#DDF3FF] flex items-center justify-between px-2 h-[58px] rounded-md">
                 <p className="text-black">Conversation 1</p>
-                <FaTrash className="text-black" />
+                <FaRegTrashAlt className="text-black" />
               </div>
               <div className="bg-[#6D31ED] flex items-center justify-between px-2 h-[58px] rounded-md">
                 <p className="text-white">Conversation 2</p>
-                <FaTrash className="text-white" />
+                <FaRegTrashAlt className="text-white" />
               </div>
             </div>
           </div>
