@@ -3,7 +3,7 @@ import { FaBrain, FaSeedling, FaTrash, FaPlus } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import logo from "../assets/images/logo.png";
 import avatar from "../assets/images/avatar.png";
-
+import { MdMenu } from "react-icons/md";
 import avatar2 from "../assets/images/avatar2.png";
 import Conversation from "../components/Chat/Conversation";
 
@@ -40,9 +40,13 @@ const Chat = () => {
           <div className="col-span-6  flex flex-col justify-between lg:h-[80vh]">
             <div className="shadow-md bg-white h-[406px]">
               {/* Chat Header */}
-              <div className="bg-[#15ABFF] flex items-center  p-2 rounded-md">
-                <img src={avatar} />
-                <p className="text-white ml-3">Chat Bot</p>
+              <div className="flex flex-row items-center justify-between bg-[#15ABFF] p-2 ">
+                <div className=" flex items-center  rounded-md">
+                  <img src={avatar} />
+                  <p className="text-white ml-3">Chat Bot</p>
+                </div>
+
+                <MdMenu className="text-white lg:hidden block text-2xl cursor-pointer" />
               </div>
               {/* Conversation */}
               <Conversation />
