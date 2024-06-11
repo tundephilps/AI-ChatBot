@@ -1,24 +1,42 @@
-import React from "react";
+import PropTypes from "prop-types";
+const Modal = ({ show, handleClose, handleConfirm }) => {
+  if (!show) return null;
 
-const Modal = () => {
   return (
-    <div className=" modal h-[100vh] w-full flex items-center justify-center">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-[#6D31ED] h-[251px] w-[556px] rounded-3xl p-8">
         <h1 className="text-3xl text-white">
-          Are you sure you want to delete conversation 1?
+          Are you sure you want to delete this conversation?
         </h1>
-
         <div className="flex flex-row items-center justify-between mt-[40px]">
-          <div className="bg-[#DDF3FF] h-[44px] w-[116px] rounded-3xl items-center justify-center flex cursor-pointer">
+          <button
+            type="button"
+            className="rounded-full bg-[#DDF3FF] h-[44px] w-[116px] text-sm font-semibold shadow-sm hover:bg-grey-400"
+            onClick={() => handleClose()}
+          >
             No
-          </div>
-          <div className="bg-[#FF0000] h-[44px] w-[116px] rounded-3xl items-center justify-center flex text-white cursor-pointer">
+          </button>
+
+          <button
+            type="button"
+            className="rounded-full bg-[#FF0000] h-[44px] w-[116px] text-sm font-semibold text-white shadow-sm hover:bg-[#FF0000]/60"
+            onClick={() => {
+              handleConfirm();
+              handleClose();
+            }}
+          >
             Yes
-          </div>
+          </button>
         </div>
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  handleConfirm: PropTypes.func.isRequired,
 };
 
 export default Modal;
