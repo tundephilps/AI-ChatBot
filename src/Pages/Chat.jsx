@@ -234,14 +234,11 @@ const Chat = () => {
                 {openMenu && (
                   <div className="absolute top-24 left-0 z-30 w-[50%] lg:hidden block">
                     <ConversationToggle
-                    // conversation={conversation}
-                    // isLoading={conversationLoading}
-                    // error={conversationError}
-                    // chatRef={chatContainerRef}
-                    // isSuccess={conversationSuccess}
-                    // isError={isError}
-                    // isAdding={isAdding}
-                    // showConversation={showConversation}
+                      conversation={conversation}
+                      isLoading={conversationLoading}
+                      error={conversationError}
+                      chatRef={chatContainerRef}
+                      isSuccess={conversationSuccess}
                     />
                   </div>
                 )}

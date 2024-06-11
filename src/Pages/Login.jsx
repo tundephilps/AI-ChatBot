@@ -89,7 +89,7 @@ const Login = () => {
           </p>
  */}
           <Link
-            className="text-[#15ABFF] text-[12px] flex items-start justify-start mr-[54%] mt-6"
+            className="text-[#15ABFF] text-[12px] flex items-start justify-start mr-[54%] mt-6 whitespace-nowrap"
             to={"/signup"}
           >
             Dont have an account? Sign Up
