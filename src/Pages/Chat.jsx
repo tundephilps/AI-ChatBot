@@ -19,7 +19,7 @@ import SpinningLoader from "../components/Loader/SpinningLoader";
 import { useNavigate } from "react-router-dom";
 
 import { AiOutlineReload } from "react-icons/ai";
-import ConversationToggle from "../components/Chat/ConversationToggle";
+import MobileSideConversation from "../components/Chat/MobileSideConversation";
 
 const Chat = () => {
   const navigate = useNavigate();
@@ -220,7 +220,7 @@ const Chat = () => {
           <div className="col-span-6  flex flex-col justify-between lg:h-[80vh]">
             <div className="shadow-md  lg:h-[68vh]">
               {/* Chat Header */}
-              <div className="flex flex-row items-center justify-between bg-[#15ABFF] p-2 ">
+              <div className="flex flex-row items-center justify-between bg-[#15ABFF] p-2 relative ">
                 <div className=" flex items-center  rounded-md">
                   <img src={avatar} />
                   <p className="text-white ml-3">Chat Bot</p>
@@ -232,15 +232,15 @@ const Chat = () => {
                 />
 
                 {openMenu && (
-                  <div className="absolute top-24 left-0 z-30 w-[50%] lg:hidden block">
-                    <ConversationToggle
-                      conversation={conversation}
-                      isLoading={conversationLoading}
-                      error={conversationError}
-                      chatRef={chatContainerRef}
-                      isSuccess={conversationSuccess}
-                    />
-                  </div>
+                  <MobileSideConversation
+                    isSuccess={isSuccess}
+                    conversations={conversations}
+                    handleDeleteConversation={handleDeleteConversation}
+                    showConversation={showConversation}
+                    selectedConversationId={selectedConversationId}
+                    handleAddConversation={handleAddConversation}
+                    isAdding={isAdding}
+                  />
                 )}
               </div>
               {/* Conversation */}
